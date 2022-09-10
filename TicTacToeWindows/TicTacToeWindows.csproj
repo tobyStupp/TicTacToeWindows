@@ -56,6 +56,7 @@
     <Compile Include="Gui\OShape.cs" />
     <Compile Include="Gui\PlayerShape.cs" />
     <Compile Include="Gui\XShape.cs" />
+    <Compile Include="Models\BoardState.cs" />
     <Compile Include="Models\TicTacToeGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

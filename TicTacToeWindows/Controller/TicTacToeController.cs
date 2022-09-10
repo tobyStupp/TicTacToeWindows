@@ -47,7 +47,7 @@ namespace TicTacToeWindows.Controller
                 return false;
             }
         }
-        public int GameOver()
+        public BoardState GameOver()
         {
             return board.Won();
         }

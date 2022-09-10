@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicTacToeWindows.Controller;
 using TicTacToeWindows.Gui;
+using TicTacToeWindows.Models;
 
 namespace TicTacToeWindows
 {
@@ -73,12 +74,13 @@ namespace TicTacToeWindows
                             p.Add(new OShape(x[i - 1] + 40, y[j - 1] + 20, 80, 90));
                         controller.NextPlay();
                         Refresh();
-                        int winner = controller.GameOver();
+                        BoardState winner = controller.GameOver();
                           
-                            if (winner!=0)
+                            if (winner!=BoardState.NOT_OVER)
                         {
                             this.Enabled = false;
-                            this.Text = winner == 1 ? "X WON!" : winner == 2 ? "O WON" : "TIE";
+                            this.label1.Text = winner==BoardState.X_WON ? "X WON!" : winner == BoardState.Y_WON ? "O WON" : "TIE";
+                            this.label1.Visible = true;
                         }
 
                         }
@@ -91,4 +93,4 @@ namespace TicTacToeWindows
                 
         }
     }
-}
+
